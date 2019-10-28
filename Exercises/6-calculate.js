@@ -1,11 +1,16 @@
 'use strict';
 
-const square = null;
+const square = x => x * x;
 
-const cube = null;
+const cube = x => x ** 3;
 
-const average = null;
+const average = (a, b) => 0.5 * (a + b);
 
-const calculate = null;
+const calculate = () => (
+  Array.from(
+    { length: 10 },
+    (v, k) => k
+  ).map(i => average(square(i), cube(i)))
+);
 
 module.exports = { square, cube, average, calculate };
